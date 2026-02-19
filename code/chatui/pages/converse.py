@@ -52,6 +52,7 @@ RECURSION_LIMIT = int(os.getenv("RECURSION_LIMIT", DEFAULT_RECURSION_LIMIT))
 LLAMA = 'meta/llama-3.3-70b-instruct'  
 MISTRAL = "mistralai/mixtral-8x22b-instruct-v0.1"
 QWEN = "qwen/qwen3-235b-a22b"
+NEMO = "nvidia/llama-3_1-nemotron-ultra-253b-v1"
 
 # check if the internal API is set
 INTERNAL_API = os.getenv('INTERNAL_API', 'no')
@@ -61,6 +62,7 @@ if INTERNAL_API == 'yes':
     LLAMA = 'nvdev/meta/llama-3.3-70b-instruct'
     MISTRAL = 'nvdev/mistralai/mixtral-8x22b-instruct-v0.1'
     QWEN = 'nvdev/qwen/qwen-235b'
+    NEMO = 'nvdev/nvidia/llama-3_1-nemotron-ultra-253b-v1'
 
 # URLs for default example docs for the RAG.
 doc_links = (
@@ -204,7 +206,7 @@ def build_page(client: chat_client.ChatClient) -> gr.Blocks:
 
     """ List of currently supported models. """
     
-    model_list = [LLAMA, MISTRAL, QWEN]
+    model_list = [LLAMA, MISTRAL, QWEN, NEMO]
 
     with gr.Blocks(title=TITLE, theme=kui_theme, css=kui_styles + _LOCAL_CSS) as page:
         gr.Markdown(f"# {TITLE}")
