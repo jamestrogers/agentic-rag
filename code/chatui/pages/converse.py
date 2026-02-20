@@ -62,7 +62,7 @@ if INTERNAL_API == 'yes':
     LLAMA = 'nvdev/meta/llama-3.3-70b-instruct'
     MISTRAL = 'nvdev/mistralai/mixtral-8x22b-instruct-v0.1'
     QWEN = 'nvdev/qwen/qwen-235b'
-    NNEMO = f'{INTERNAL_API}/nvidia/llama-3_1-nemotron-ultra-253b-v1'
+    NEMO = f'{INTERNAL_API}/nvidia/llama-3_1-nemotron-ultra-253b-v1'
 
 # URLs for default example docs for the RAG.
 doc_links = (
