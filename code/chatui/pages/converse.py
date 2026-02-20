@@ -62,71 +62,11 @@ if INTERNAL_API == 'yes':
     LLAMA = 'nvdev/meta/llama-3.3-70b-instruct'
     MISTRAL = 'nvdev/mistralai/mixtral-8x22b-instruct-v0.1'
     QWEN = 'nvdev/qwen/qwen-235b'
-    NEMO = 'nvdev/nvidia/llama-3_1-nemotron-ultra-253b-v1'
+    NNEMO = f'{INTERNAL_API}/nvidia/llama-3_1-nemotron-ultra-253b-v1'
 
 # URLs for default example docs for the RAG.
 doc_links = (
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/overview/introduction.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/overview/desktop-app.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/overview/command-line-interface.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/install/installation-overview.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/install/desktop-app-install.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/install/full-local-install.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/install/remote-install.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/install/uninstall.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/install/update.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/overview/onboarding-project.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/concepts/project-concept.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/concepts/location-concept.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/concepts/single-container-concept.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/concepts/compose-concept.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/concepts/application-concept.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/concepts/versioning-concept.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/concepts/understand-project-specification.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/how-to/projects/create-clone-publish.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/how-to/projects/file-browser.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/how-to/projects/deep-linking.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/how-to/projects/versioning.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/how-to/add-existing-location.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/how-to/add-brev.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/how-to/ides/vs-code.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/how-to/ides/cursor.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/how-to/ides/windsurf.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/how-to/environments/package-management.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/how-to/environments/prebuild-script.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/how-to/environments/postbuild-script.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/how-to/environments/runtime-configuration.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/how-to/environments/hardware.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/how-to/environments/multi-container.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/how-to/integrations/github-gitlab.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/how-to/integrations/self-hosted-gitlab.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/how-to/integrations/nvidia-integrations.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/how-to/app-sharing.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/how-to/use-custom-container.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/how-to/convert-repo.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/reference/applications-reference.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/reference/user-interface/desktop-app.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/reference/user-interface/cli.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/reference/glossary.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/reference/projects/runtime-configuration-reference.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/reference/projects/hardware-reference.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/reference/projects/custom-container.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/reference/projects/compose-reference.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/reference/projects/compose-patterns-reference.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/reference/projects/spec.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/reference/projects/base-environments.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/reference/remote-locations.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/reference/workbench-application/components.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/reference/workbench-application/settings.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/reference/workbench-application/customize-the-ui.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/reference/workbench-application/runtimes.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/reference/workbench-application/customca.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/reference/workbench-application/proxy.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/reference/support-matrix.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/reference/versioning/git-configuration-reference.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/reference/windows-full-local-reference.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/reference/troubleshooting/troubleshooting.html",
-    "https://docs.nvidia.com/ai-workbench/user-guide/latest/reference/troubleshooting/logging.html",
+    "https://www.apeel.com/",
 )
 EXAMPLE_LINKS_LEN = 10
 
@@ -246,12 +186,12 @@ def build_page(client: chat_client.ChatClient) -> gr.Blocks:
 
                 # Sample questions that users can click on to use
                 with gr.Row(equal_height=True):
-                    sample_query_1 = gr.Button("How do I add an integration in the CLI?", variant="secondary", size="sm", interactive=True)
-                    sample_query_2 = gr.Button("How do I fix an inaccessible remote Location?", variant="secondary", size="sm", interactive=True)
+                    sample_query_1 = gr.Button("How am I feeling today?", variant="secondary", size="sm", interactive=True)
+                    sample_query_2 = gr.Button("How am I feeling this month?", variant="secondary", size="sm", interactive=True)
                 
                 with gr.Row(equal_height=True):
-                    sample_query_3 = gr.Button("What are the NVIDIA-provided default base environments?", variant="secondary", size="sm", interactive=True)
-                    sample_query_4 = gr.Button("How do I create a support bundle for troubleshooting?", variant="secondary", size="sm", interactive=True)
+                    sample_query_3 = gr.Button("What is something I'm excited about?", variant="secondary", size="sm", interactive=True)
+                    sample_query_4 = gr.Button("What is a creative social media post I should write?", variant="secondary", size="sm", interactive=True)
             
             # Hidden column to be rendered when the user collapses all settings.
             with gr.Column(scale=1, min_width=100, visible=False) as hidden_settings_column:
