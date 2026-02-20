@@ -52,7 +52,7 @@ RECURSION_LIMIT = int(os.getenv("RECURSION_LIMIT", DEFAULT_RECURSION_LIMIT))
 LLAMA = 'meta/llama-3.3-70b-instruct'  
 MISTRAL = "mistralai/mixtral-8x22b-instruct-v0.1"
 QWEN = "qwen/qwen3-235b-a22b"
-NEMO = "nvidia/llama-3_1-nemotron-ultra-253b-v1"
+NEMO = "nvidia/nemotron-4-340b-instruct"
 
 # check if the internal API is set
 INTERNAL_API = os.getenv('INTERNAL_API', 'no')
@@ -62,7 +62,7 @@ if INTERNAL_API == 'yes':
     LLAMA = 'nvdev/meta/llama-3.3-70b-instruct'
     MISTRAL = 'nvdev/mistralai/mixtral-8x22b-instruct-v0.1'
     QWEN = 'nvdev/qwen/qwen-235b'
-    NEMO = f'{INTERNAL_API}/nvidia/llama-3_1-nemotron-ultra-253b-v1'
+    NEMO = 'nvdev/nvidia/nemotron-4-340b-instruct'
 
 # URLs for default example docs for the RAG.
 doc_links = (
