@@ -53,6 +53,7 @@ LLAMA = 'meta/llama-3.3-70b-instruct'
 MISTRAL = "mistralai/mixtral-8x22b-instruct-v0.1"
 QWEN = "qwen/qwen3-235b-a22b"
 NEMO = "nvidia/nemotron-4-340b-instruct"
+QWEN80B = "qwen/qwen3-next-80b-a3b-instruct"
 
 # check if the internal API is set
 INTERNAL_API = os.getenv('INTERNAL_API', 'no')
@@ -63,6 +64,7 @@ if INTERNAL_API == 'yes':
     MISTRAL = 'nvdev/mistralai/mixtral-8x22b-instruct-v0.1'
     QWEN = 'nvdev/qwen/qwen-235b'
     NEMO = 'nvdev/nvidia/nemotron-4-340b-instruct'
+    QWEN80B = 'nvdev/qwen/qwen3-next-80b-a3b-instruct'
 
 # URLs for default example docs for the RAG.
 doc_links = (
@@ -146,7 +148,7 @@ def build_page(client: chat_client.ChatClient) -> gr.Blocks:
 
     """ List of currently supported models. """
     
-    model_list = [LLAMA, MISTRAL, QWEN, NEMO]
+    model_list = [LLAMA, MISTRAL, QWEN, NEMO, QWEN80B]
 
     with gr.Blocks(title=TITLE, theme=kui_theme, css=kui_styles + _LOCAL_CSS) as page:
         gr.Markdown(f"# {TITLE}")
