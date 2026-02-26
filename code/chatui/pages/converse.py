@@ -275,16 +275,6 @@ def build_page(client: chat_client.ChatClient) -> gr.Blocks:
 
                     # Settings for each component model of the agentic workflow
                     with gr.TabItem("Models", id=1) as agent_settings:
-                            gr.Markdown(
-                                        """
-                                        ##### Use the Models tab to configure individual model components
-                                        - Click a component below (e.g. Router) and select API or NIM 
-                                        - For APIs, select the model from the dropdown
-                                        - For self-hosted endpoints, see instructions [here](https://github.com/nv-twhitehouse/workbench-example-agentic-rag/blob/twhitehouse/april-16/agentic-rag-docs/self-host.md)
-                                        - (optional) Customize component behavior by changing the prompts
-                                        """
-                            )
-                            gr.HTML('<hr style="border:1px solid #ccc; margin: 10px 0;">')
                                     
                             ########################
                             ##### ROUTER MODEL #####
